@@ -9,12 +9,14 @@ public class Main {
 
         System.out.println("Server startato");
 
-        ServerSocket ss = new ServerSocket(5672);
+        ServerSocket ss = new ServerSocket(3000);
         while (true) {
             Socket mySocket2 = ss.accept();
             MyThread t = new MyThread(mySocket2);
             t.start();
         }
 
+
     }
+
 }
